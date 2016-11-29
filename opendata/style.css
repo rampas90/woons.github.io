@@ -1,0 +1,123 @@
+/*TYPOGRAPHY*/
+@import url(//cdn.jsdelivr.net/nanumsquare/1.0/nanumsquare.css);
+
+
+/* CSS RESET */
+body, h1, h3, p {
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+html {
+    font-family: 'NanumSquare', sans-serif;
+    color: white;
+}
+
+body {
+    background: #1A2B34;
+}
+
+.l-col-12-12 { width: 100%; }
+.l-col-11-12 { width: 91.66666667%; }
+.l-col-10-12 { width: 83.33333333%; }
+.l-col-9-12  { width: 75%; }
+.l-col-8-12  { width: 66.66666667%; }
+.l-col-7-12  { width: 58.33333333%; }
+.l-col-6-12  { width: 50%; }
+.l-col-5-12  { width: 41.66666667%; }
+.l-col-4-12  { width: 33.33333333%; }
+.l-col-3-12  { width: 25%; }
+.l-col-2-12  { width: 16.66666667%; }
+.l-col-1-12  { width: 8.33333333%; }
+
+
+/* LAYOUT */
+.l-wrapper {
+    /*width: 960px; 1140*/
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 20px; /*반응형해도 좌우 여백 살아남*/
+}
+
+.l-row {
+    overflow : hidden;
+    margin: 0 -10px; /*양 옆에 padding 때문에 생긴 여백을 채워줌*/
+}
+
+.l-col {
+    float: left;
+    padding: 0 10px;
+    box-sizing: border-box; /*패딩값이 width, height에 포함되어 버림*/
+    margin-bottom: 20px;
+}
+
+
+
+/*MODULE*/
+.cover {
+    /*background-position: center;*/ /*contain도 기억*/
+   /* background-size: cover;
+    background-image: url(images/cover.png);*/
+    background-color: #2098D1; /*메인화면 컬러*/
+    height: 33vh;  /*viewport의 100%*/
+}
+
+.header {
+    /*margin-top과 line-height는 같이 다니자*/
+    font-size: 40px;
+    color: white; /*헤드라인 텍스트 컬러*/
+    margin-top: -0.9em;
+    line-height: 0.8em;
+    /*white-space: nowrap; 화면 너비 줄여도 밑으로 텍스트 안떨어짐*/
+    transition: all 2s;
+}
+
+.contents {
+    padding: 20px 0;
+}
+
+.title {
+    color: #ddd;  /*타이틀 텍스트 컬러 */
+    margin: 4px 0 0 0 ;
+}
+
+
+.box {
+}
+
+.box img {
+    max-width: 100%;
+    height: auto; /*익스플로러에서 이거 안적으면 문생길 수 있음*/
+    vertical-align: top; /*이미지이기 때문에 밑에 여백이 생겨서 vertical-align: 으로 잡아줘야함*/
+}
+
+/*mediaquery*/
+
+/*미디어쿼리는 위의 CSS 클래스명과 동일하게 해줘야 우선순위 문제가 발생하지 않는다*/
+@media ( max-width: 960px ) {
+    .header {
+        font-size: 50px;
+    }
+    .cover {
+        height: 25vh;
+    }
+    .l-col {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 30px;
+    }
+    .cover {
+        height: 25vh;
+    }
+    .l-col {
+        width: 100%;
+    }
+    .l-wrapper {
+        padding: 0;
+    }
+}
