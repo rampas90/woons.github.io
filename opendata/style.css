@@ -82,6 +82,12 @@ body {
     margin: 4px 0 0 0 ;
 }
 
+.description {
+    margin-top: 7px;
+    color: #ddd;
+    font-size: 12px;
+}
+
 
 .box {
 }
