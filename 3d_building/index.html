@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoieWVvd29vbiIsImEiOiIzOTU0MmFmZDUzOTc3YTY4YzA2YjZhYjY3M2FjNWE3MyJ9.QJHVKjVYrn_CkFKaGPShSw';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/yeowoon/ciw4ep4ys00022knojs913qo4', //hosted style id
+    center: [129.035424, 35.103052], // starting position
+    zoom: 18, // starting zoom
+    bearing : -70,
+    pitch : 70
+});
+	/*3D building*/
+	map.on('load', function() {
+	    map.addLayer({
+	        'id': '3d', /*id는 변경해도 변화 없음 */ 
+	        'source': 'composite', /*composite로 해야 결과물 나옴*/ 
+	        'source-layer': 'mydata', /*높이 데이터가 있는 레이어 이름*/ 
+	        'filter': ['==', 'extrude', 'true'],  /*대소문자 주의*/
+	        'type': 'fill-extrusion',
+	        'minzoom': 15,
+	        'paint': {
+	            'fill-extrusion-color': '#1A2B34',
+	            'fill-extrusion-height': {
+	                'type': 'identity',
+	                'property': 'height'
+	            },
+	            'fill-extrusion-base': {
+	                'type': 'identity',
+	                'property': 'min_height'
+	            },
+	            'fill-extrusion-opacity': .9
+	        }
+	    });
+	});
+</script>
+
+</body>
+</html>
