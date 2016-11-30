@@ -2,24 +2,28 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title></title>
+    <title>Busan_Junggu_3D_Buildings</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  	<!-- Facebook Meta -->
+        <meta property="og:title" content="자주가는 공공데이터 포털 정리" />
+        <meta property="og:description" content="유용한 공공데이터를 정리했습니다" />
+        <meta property="og:url" content="#" />
+        <meta property="og:image" content="http://woons.github.io/opendata/images/fbimage.jpg" />
 </head>
 <body>
 
 <div id='map'></div>
+<!-- <pre id='info'></pre>
+ --><pre id='features'></pre>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoieWVvd29vbiIsImEiOiIzOTU0MmFmZDUzOTc3YTY4YzA2YjZhYjY3M2FjNWE3MyJ9.QJHVKjVYrn_CkFKaGPShSw';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/yeowoon/ciw4ep4ys00022knojs913qo4', //hosted style id
-    center: [129.035424, 35.103052], // starting position
+    center: [129.0360611, 35.10082267], // starting position
     zoom: 18, // starting zoom
     bearing : -70,
     pitch : 70
@@ -47,6 +51,20 @@ var map = new mapboxgl.Map({
 	        }
 	    });
 	});
+
+	map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point);
+    document.getElementById('features').innerHTML = JSON.stringify(features, null, 2);
+});
+
+	/*map.on('mousemove', function (e) {
+    document.getElementById('info').innerHTML =
+        // e.point is the x, y coordinates of the mousemove event relative
+        // to the top-left corner of the map
+        JSON.stringify(e.point) + '<br />' +
+            // e.lngLat is the longitude, latitude geographical position of the event
+        JSON.stringify(e.lngLat);
+});*/
 </script>
 
 </body>
