@@ -36,6 +36,7 @@ body {
 .l-wrapper {
     /*width: 960px; 1140*/
     margin: 0 auto;
+    position: relative;
     max-width: 960px;
     padding: 0 20px; /*반응형해도 좌우 여백 살아남*/
 }
@@ -61,6 +62,16 @@ body {
     background-image: url(images/cover.png);*/
     background-color: #2098D1; /*메인화면 컬러*/
     height: 33vh;  /*viewport의 100%*/
+}
+
+.cover-wrapper {
+    position: relative;
+}
+
+.cover-wrapper h3 {
+    position: absolute;
+    margin: auto;
+    font-size: 40px;
 }
 
 .header {

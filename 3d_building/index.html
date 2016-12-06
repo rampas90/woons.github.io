@@ -2,43 +2,43 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Busan_Junggu_3D_Buildings</title>
+    <title>Marine City_Building_Heights</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />
   	<link rel="stylesheet" type="text/css" href="style.css">
   	<!-- Facebook Meta -->
-        <meta property="og:title" content="Data Visualization_Buildings_Busan_Junggu" />
-        <meta property="og:description" content="부산광역시 중구 또따또가 건물 높이 시각화" />
+        <meta property="og:title" content="Data Visualization_Building_Height" />
+        <meta property="og:description" content="Marine City Building Height" />
         <meta property="og:url" content="https://woons.github.io/3d_building/" />
         <meta property="og:image" content="http://woons.github.io/opendata/images/fbimage.jpg" />
 </head>
 <body>
 
 <div id='map'></div>
-<!-- <pre id='info'></pre>
- --><pre id='features'></pre>
+
+ <!-- <pre id='features'></pre> -->
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoieWVvd29vbiIsImEiOiIzOTU0MmFmZDUzOTc3YTY4YzA2YjZhYjY3M2FjNWE3MyJ9.QJHVKjVYrn_CkFKaGPShSw';
 var map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/yeowoon/ciw4ep4ys00022knojs913qo4', //hosted style id
-    center: [129.0360611, 35.10082267], // starting position
-    zoom: 18, // starting zoom
+    style: 'mapbox://styles/yeowoon/ciwdci8tb001s2qoi1iy0fct7', //hosted style id
+    center: [129.1439437, 35.1598543], // starting position
+    zoom: 12, 
     bearing : -70,
     pitch : 70
 });
 	/*3D building*/
 	map.on('load', function() {
 	    map.addLayer({
-	        'id': '3d', /*id는 변경해도 변화 없음 */ 
+	        'id': 'marine', /*id는 변경해도 변화 없음 */ 
 	        'source': 'composite', /*composite로 해야 결과물 나옴*/ 
-	        'source-layer': 'mydata', /*높이 데이터가 있는 레이어 이름*/ 
+	        'source-layer': 'final84-3frnf3', /*높이 데이터가 있는 레이어 이름*/ 
 	        'filter': ['==', 'extrude', 'true'],  /*대소문자 주의*/
 	        'type': 'fill-extrusion',
-	        'minzoom': 15,
+	        'minzoom': 13,
 	        'paint': {
-	            'fill-extrusion-color': '#1A2B34',
+	            'fill-extrusion-color': '#607D8B',
 	            'fill-extrusion-height': {
 	                'type': 'identity',
 	                'property': 'height'
@@ -52,10 +52,10 @@ var map = new mapboxgl.Map({
 	    });
 	});
 
-	map.on('mousemove', function (e) {
+	/*map.on('mousemove', function (e) {
     var features = map.queryRenderedFeatures(e.point);
     document.getElementById('features').innerHTML = JSON.stringify(features, null, 2);
-});
+});*/
 
 	/*map.on('mousemove', function (e) {
     document.getElementById('info').innerHTML =
