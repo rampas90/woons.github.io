@@ -1,34 +1,11 @@
-@import url(//cdn.jsdelivr.net/nanumsquare/1.0/nanumsquare.css);
-
-html {
-	font-family: 'NanumSquare', sans-serif;
+body{
+    margin: 0;
+    padding: 0;
 }
 
-body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-
- #features {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 300px;
-        overflow: auto;
-        background: rgba(255, 255, 255, 0.8);
-    }
-#map canvas {
-        cursor: crosshair;
-    }
-
-#info {
-        display: block;
-        position: relative;
-        margin: 0px auto;
-        width: 50%;
-        padding: 10px;
-        border: none;
-        border-radius: 3px;
-        font-size: 12px;
-        text-align: center;
-        color: #222;
-        background: #fff;
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
