@@ -25,7 +25,7 @@ var map = new mapboxgl.Map({
     center: [129.1439437, 35.1598543], // starting position
     zoom: 13.5, 
     bearing : -60,
-    pitch : 70
+    pitch : 100
 });
 	/*3D building*/
 	map.on('load', function() {
@@ -36,6 +36,7 @@ var map = new mapboxgl.Map({
 	        'filter': ['==', 'extrude', 'true'],  
 	        'type': 'fill-extrusion',
 	        'minzoom': 0,
+	        /*'maxzoon' : 20,*/
 	        'paint': {
 	            'fill-extrusion-color': '#607D8B',
 	            'fill-extrusion-height': {
