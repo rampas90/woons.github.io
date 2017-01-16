@@ -23,58 +23,46 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/yeowoon/ciwdhb9oi00292qoidpw2901k', //hosted style id  ciwdhb9oi00292qoidpw2901k
     center: [129.1439437, 35.1598543], // starting position
-    zoom: 13.9, 
+    zoom: 14.3, 
     bearing : -60,
     pitch : 100
 });
-	/*3D building*/
-	map.on('load', function() {
-	    map.addLayer({
-	        'id': 'marine', //marine
-	        'source': 'composite', //composite
-	        'source-layer': 'final84-3frnf3', 
-	        'filter': ['==', 'extrude', 'true'],  
-	        'type': 'fill-extrusion',
-	        'minzoom': 0,
-	        /*'maxzoon' : 20,*/
-	        'paint': {
-	            'fill-extrusion-color': {
+map.addControl(new mapboxgl.NavigationControl());
+
+map.on('load', function() {
+    map.addSource('final84-3frnf3', {
+        type: 'vector',
+        url:'mapbox://yeowoon.7xu15e2z'
+    });
+    map.addLayer({
+        'id': 'building-extrude',
+        'type': 'fill-extrusion',
+        'source': 'composite',
+        "source-layer": "final84-3frnf3",
+        'paint': {
+            'fill-extrusion-color': {
                 'property': 'A13',
                 'type': 'exponential',
                 "stops": [
-                    [19500000, "#33373D"], 
-                    [19600000, "#2D3133"], 
-                    [19700000, "#4B5162"], 
-                    [19800000, "#7C878C"], 
-                    [19900000, "#7C878C"], 
-                    [20000000, "#FFFFFF"], 
-                    [20100000, "#39579A"]
+                    [19500000, "#961B5D"], 
+                    [19600000, "#025862"], 
+                    [19700000, "#A19527"], 
+                    [19800000, "#480629"], 
+                    [19900000, "#961B5D"], 
+                    [20000000, "#00cc99"], 
+                    [20100000, "#A19527"], 
+                    [20200000, "#740258"]
                ]
             },
-	            'fill-extrusion-height': {
-	                'type': 'identity',
-	                'property': 'height'
-	            },
-	            'fill-extrusion-base': {
-	                'type': 'identity',
-	                'property': 'min_height'
-	            },
-	            'fill-extrusion-opacity': .6
-	        }
-	    });
-	});
-	/*map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point);
-    document.getElementById('features').innerHTML = JSON.stringify(features, null, 2);
-});*/
-	/*map.on('mousemove', function (e) {
-    document.getElementById('info').innerHTML =
-        // e.point is the x, y coordinates of the mousemove event relative
-        // to the top-left corner of the map
-        JSON.stringify(e.point) + '<br />' +
-            // e.lngLat is the longitude, latitude geographical position of the event
-        JSON.stringify(e.lngLat);
-});*/
+            'fill-extrusion-height': {
+                'property': 'height',
+                'type': 'identity'
+            },
+            'fill-extrusion-opacity': 0.95,
+        }
+    });
+});
+
 </script>
 
 </body>
