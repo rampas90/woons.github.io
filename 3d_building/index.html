@@ -12,10 +12,78 @@
         <meta property="og:description" content="Marine City Building Height" />
         <meta property="og:url" content="https://woons.github.io/3d_building/" />
         <meta property="og:image" content="http://woons.github.io/3d_building/images/images.png" />
+        <style>
+    .title {
+        color: white;
+        opacity: 1;
+        font-family: helvetica;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 250px;
+        height: 300px;
+        margin: 50px;
+
+ 
+    }
+    .legend-year {
+    	color: white;
+    	font-size: 10;
+        display: inline-block;
+        border-radius: 20%;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        margin-bottom: -3px;
+    }
+
+    .legend-text {
+    	font-size: 20px;
+    	margin-bottom: 5px;
+    	font-family: helvetica;
+    }
+</style>
 </head>
 <body>
 
-<div id='map'></div>
+	<div id='map'></div>
+	<div class='title'>
+		    <h4>About Marine City Buildings</h4>
+		    <div class="legend-box">
+		        <div>
+		            <span class="legend-year" style="background-color:#F2F12D;"></span>
+		            <span class="legend-text">1950~</span>
+		        </div>
+		        <div>
+		            <span class="legend-year" style="background-color:#EED322;"></span>
+		            <span class="legend-text">1960~</span>
+		        </div>
+		        <div>
+		            <span class="legend-year" style="background-color:#E6B71E;"></span>
+		            <span class="legend-text">1970~</span>
+		        </div>
+		        <div>
+		            <span class="legend-year" style="background-color:#DA9C20;"></span>
+		            <span class="legend-text">1980~</span>
+		        </div>
+		        <div>
+		            <span class="legend-year" style="background-color:#CA8323;"></span>
+		            <span class="legend-text">1990~</span>
+		        </div>
+		        <div>
+		            <span class="legend-year" style="background-color:#B86B25;"></span>
+		            <span class="legend-text">2000~</span>
+		        </div>
+		        <div>
+		            <span class="legend-year" style="background-color:#A25626;"></span>
+		            <span class="legend-text">2010~</span>
+		        </div>
+		        <div>
+		            <span class="legend-year" style="background-color:#8B4225;"></span>
+		            <span class="legend-text">2020~</span>
+		        </div>
+		    </div>
+		</div>
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoieWVvd29vbiIsImEiOiIzOTU0MmFmZDUzOTc3YTY4YzA2YjZhYjY3M2FjNWE3MyJ9.QJHVKjVYrn_CkFKaGPShSw';
@@ -44,16 +112,16 @@ map.on('load', function() {
                 'property': 'A13',
                 'type': 'exponential',
                 "stops": [
-                    [19500000, "#961B5D"], 
-                    [19600000, "#025862"], 
-                    [19700000, "#A19527"], 
-                    [19800000, "#480629"], 
-                    [19900000, "#961B5D"], 
-                    [20000000, "#00cc99"], 
-                    [20100000, "#1A2B34"], 
-                    [20200000, "#1A2B34"]
-               ]
-            },
+                    [0, '#F2F12D'],
+                    [19500000, '#EED322'],
+                    [19700000, '#E6B71E'],
+                    [19800000, '#DA9C20'],
+                    [19900000, '#CA8323'],
+                    [20000000, '#B86B25'],
+                    [20100000, '#A25626'],
+                    [20200000, '#8B4225']
+                ]
+            }, //19500000-2020000
             'fill-extrusion-height': {
                 'property': 'height',
                 'type': 'identity'
