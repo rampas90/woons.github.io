@@ -21,24 +21,36 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoieWVvd29vbiIsImEiOiIzOTU0MmFmZDUzOTc3YTY4YzA2YjZhYjY3M2FjNWE3MyJ9.QJHVKjVYrn_CkFKaGPShSw';
 var map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/yeowoon/ciwdhb9oi00292qoidpw2901k', //hosted style id
+    style: 'mapbox://styles/yeowoon/ciwdhb9oi00292qoidpw2901k', //hosted style id  ciwdhb9oi00292qoidpw2901k
     center: [129.1439437, 35.1598543], // starting position
-    zoom: 13.5, 
+    zoom: 13.9, 
     bearing : -60,
     pitch : 100
 });
 	/*3D building*/
 	map.on('load', function() {
 	    map.addLayer({
-	        'id': 'marine', 
-	        'source': 'composite', 
+	        'id': 'marine', //marine
+	        'source': 'composite', //composite
 	        'source-layer': 'final84-3frnf3', 
 	        'filter': ['==', 'extrude', 'true'],  
 	        'type': 'fill-extrusion',
 	        'minzoom': 0,
 	        /*'maxzoon' : 20,*/
 	        'paint': {
-	            'fill-extrusion-color': '#607D8B',
+	            'fill-extrusion-color': {
+                'property': 'A13',
+                'type': 'exponential',
+                "stops": [
+                    [19500000, "#33373D"], 
+                    [19600000, "#2D3133"], 
+                    [19700000, "#4B5162"], 
+                    [19800000, "#7C878C"], 
+                    [19900000, "#7C878C"], 
+                    [20000000, "#FFFFFF"], 
+                    [20100000, "#39579A"]
+               ]
+            },
 	            'fill-extrusion-height': {
 	                'type': 'identity',
 	                'property': 'height'
@@ -51,12 +63,10 @@ var map = new mapboxgl.Map({
 	        }
 	    });
 	});
-
 	/*map.on('mousemove', function (e) {
     var features = map.queryRenderedFeatures(e.point);
     document.getElementById('features').innerHTML = JSON.stringify(features, null, 2);
 });*/
-
 	/*map.on('mousemove', function (e) {
     document.getElementById('info').innerHTML =
         // e.point is the x, y coordinates of the mousemove event relative
