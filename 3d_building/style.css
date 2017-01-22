@@ -17,6 +17,7 @@ body{
     font-family: 'NanumSquare', sans-serif;
     margin-top: 30px;
     margin-left: 20px;
+    margin-bottom: 10px;
     color: white;
 }
 
@@ -24,7 +25,8 @@ body{
     font-family: 'NanumSquare', sans-serif;
     color: white;
     font-size: 13px;
-    margin-top: -15px;
+    margin-top: -3px;
+    line-height: 1.4em;
     margin-left: 20px;
 }
 
@@ -38,6 +40,9 @@ body{
 	position: absolute;
 }
 
+.panel-content {
+    margin-top: 35px;
+}
 
 /*차트이미지*/
 .chart {
@@ -53,10 +58,11 @@ body{
     color: white;
     font-size: 13px;
     margin-left: 20px;
+    margin-bottom: 0px;
 }
 
 .legend-box {
-    margin-left: 20px;
+    margin-top: 2px;
 }
 
 .legend-year {
@@ -77,5 +83,9 @@ body{
     color: white;
     margin-bottom: 5px;
     font-family: helvetica;
+}
+
+.data-source .content {
+    margin-top: 10px;
 }
 
