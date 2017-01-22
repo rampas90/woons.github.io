@@ -50,7 +50,7 @@ body{
 /*범례부분*/
 .legend-intro {
     font-family: 'NanumSquare', sans-serif;
-    color: white
+    color: white;
     font-size: 13px;
     margin-left: 30px;
 }
