@@ -16,7 +16,7 @@ body{
 .title {
     font-family: 'NanumSquare', sans-serif;
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 20px;
     color: white;
 }
 
@@ -25,7 +25,7 @@ body{
     color: white;
     font-size: 13px;
     margin-top: -15px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 /*패널 박스*/
@@ -52,11 +52,11 @@ body{
     font-family: 'NanumSquare', sans-serif;
     color: white;
     font-size: 13px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .legend-box {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .legend-year {
@@ -67,7 +67,7 @@ body{
     width: 20px;
     height: 20px;
     margin-right: 5px;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-bottom: -3px;
 }
 
