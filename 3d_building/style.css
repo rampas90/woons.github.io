@@ -30,12 +30,12 @@ body{
 
 /*패널 박스*/
 .panel {
-	top: 0;
-	bottom: 0;
-	width: 400px;
-	background-color: #22323A;
-	opacity: 0.8;
-	position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    background-color: #22323A;
+    opacity: 0.8;
+    position: absolute;
 }
 
 
@@ -67,6 +67,7 @@ body{
     width: 20px;
     height: 20px;
     margin-right: 5px;
+    margin-left: 30px;
     margin-bottom: -3px;
 }
 
