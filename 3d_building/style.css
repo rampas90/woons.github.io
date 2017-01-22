@@ -1,3 +1,5 @@
+@import url(//cdn.jsdelivr.net/nanumsquare/1.0/nanumsquare.css);
+
 body{
     margin: 0;
     padding: 0;
@@ -9,3 +11,70 @@ body{
     bottom: 0;
     width: 100%;
 }
+
+
+.title {
+    font-family: 'NanumSquare', sans-serif;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: white;
+}
+
+.content {
+    font-family: 'NanumSquare', sans-serif;
+    color: white;
+    font-size: 13px;
+    margin-top: -15px;
+    margin-left: 30px;
+}
+
+/*패널 박스*/
+.panel {
+	top: 0;
+	bottom: 0;
+	width: 400px;
+	background-color: #22323A;
+	opacity: 0.8;
+	position: absolute;
+}
+
+
+/*차트이미지*/
+.chart {
+    width: 400px;
+    height: 319px;
+    background-image: url(images/chart2.jpg);
+}
+
+
+/*범례부분*/
+.legend-intro {
+    font-family: 'NanumSquare', sans-serif;
+    color: white
+    font-size: 13px;
+    margin-left: 30px;
+}
+
+.legend-box {
+    margin-left: 30px;
+}
+
+.legend-year {
+    color: white;
+    font-size: 10;
+    display: inline-block;
+    border-radius: 20%;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: -3px;
+}
+
+.legend-text {
+    font-size: 20px;
+    font-family: 'NanumSquare', sans-serif;
+    color: white;
+    margin-bottom: 5px;
+    font-family: helvetica;
+}
+
