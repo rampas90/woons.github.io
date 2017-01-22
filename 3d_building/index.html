@@ -12,76 +12,89 @@
         <meta property="og:description" content="Marine City Building Height" />
         <meta property="og:url" content="https://woons.github.io/3d_building/" />
         <meta property="og:image" content="http://woons.github.io/3d_building/images/images.png" />
-        <style>
-    .title {
-        color: white;
-        opacity: 1;
-        font-family: helvetica;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        width: 250px;
-        height: 300px;
-        margin: 50px;
 
- 
-    }
-    .legend-year {
-    	color: white;
-    	font-size: 10;
-        display: inline-block;
-        border-radius: 20%;
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
-        margin-bottom: -3px;
-    }
-
-    .legend-text {
-    	font-size: 20px;
-    	margin-bottom: 5px;
-    	font-family: helvetica;
-    }
-</style>
 </head>
-<body>
+<body> 
+    <div id='map'></div>
+        <div class="panel">
+        <div class="panel-content">
+        <h3 class="title">부산 해운대구 건물 높이</h3>
+        <p class="content">구도심 수영구와 신도심 해운대구의 건물 높이와 년식 데이터시각화
+        1970년대 후반과 1990년대 초반 건물 승인이 많다는 것을 확인</p>
 
-	<div id='map'></div>
-	<div class='title'>
-		    <h4>About Marine City Buildings</h4>
-		    <div class="legend-box">
-		        <div>
-		            <span class="legend-year" style="background-color:#fff;"></span>
-		            <span class="legend-text">1950~</span>
-		        </div>
-		        <div>
-		            <span class="legend-year" style="background-color:#EED322;"></span>
-		            <span class="legend-text">1960~</span>
-		        </div>
-		        <div>
-		            <span class="legend-year" style="background-color:#E6B71E;"></span>
-		            <span class="legend-text">1970~</span>
-		        </div>
-		        <div>
-		            <span class="legend-year" style="background-color:#DA9C20;"></span>
-		            <span class="legend-text">1980~</span>
-		        </div>
-		        <div>
-		            <span class="legend-year" style="background-color:#CA8323;"></span>
-		            <span class="legend-text">1990~</span>
-		        </div>
-		        <div>
-		            <span class="legend-year" style="background-color:#B86B25;"></span>
-		            <span class="legend-text">2000~</span>
-		        </div>
-		        <div>
-		            <span class="legend-year" style="background-color:#D82E30;"></span>
-		            <span class="legend-text">2010~</span>
-		        </div>
-		        
-		    </div>
-		</div>
+        <!-- 차트이미지 -->
+        <div class="chart"></div>
+        
+        <!-- 범례부분 -->
+        <div class="legend">
+        <h3 class="title">건물 승인년도 범례</h3>
+            <div>
+                <span class="legend-year" style="background-color:#fff;"></span>
+                <span class="legend-text">1950~</span>
+            </div>
+            <div>
+                <span class="legend-year" style="background-color:#EED322;"></span>
+                <span class="legend-text">1960~</span>
+            </div>
+            <div>
+                <span class="legend-year" style="background-color:#E6B71E;"></span>
+                <span class="legend-text">1970~</span>
+            </div>
+            <div>
+                <span class="legend-year" style="background-color:#DA9C20;"></span>
+                <span class="legend-text">1980~</span>
+            </div>
+            <div>
+                <span class="legend-year" style="background-color:#CA8323;"></span>
+                <span class="legend-text">1990~</span>
+            </div>
+            <div>
+                <span class="legend-year" style="background-color:#B86B25;"></span>
+                <span class="legend-text">2000~</span>
+            </div>
+            <div>
+                <span class="legend-year" style="background-color:#D82E30;"></span>
+                <span class="legend-text">2010~</span>
+            </div>            
+        </div> <!-- 범례 -->
+    </div>
+    </div>
 
+    <!-- <div class="info">
+        <h4 class="title">About Marine City Buildings</h4>
+        <img src="images/chart2.jpg">
+            <div class="legend-box">
+                        <div>
+                            <span class="legend-year" style="background-color:#fff;"></span>
+                            <span class="legend-text">1950~</span>
+                        </div>
+                        <div>
+                            <span class="legend-year" style="background-color:#EED322;"></span>
+                            <span class="legend-text">1960~</span>
+                        </div>
+                        <div>
+                            <span class="legend-year" style="background-color:#E6B71E;"></span>
+                            <span class="legend-text">1970~</span>
+                        </div>
+                        <div>
+                            <span class="legend-year" style="background-color:#DA9C20;"></span>
+                            <span class="legend-text">1980~</span>
+                        </div>
+                        <div>
+                            <span class="legend-year" style="background-color:#CA8323;"></span>
+                            <span class="legend-text">1990~</span>
+                        </div>
+                        <div>
+                            <span class="legend-year" style="background-color:#B86B25;"></span>
+                            <span class="legend-text">2000~</span>
+                        </div>
+                        <div>
+                            <span class="legend-year" style="background-color:#D82E30;"></span>
+                            <span class="legend-text">2010~</span>
+                        </div>
+                        
+            </div> 
+    </div> -->
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoieWVvd29vbiIsImEiOiIzOTU0MmFmZDUzOTc3YTY4YzA2YjZhYjY3M2FjNWE3MyJ9.QJHVKjVYrn_CkFKaGPShSw';
 var map = new mapboxgl.Map({
@@ -93,7 +106,6 @@ var map = new mapboxgl.Map({
     pitch : 100
 });
 map.addControl(new mapboxgl.NavigationControl());
-
 map.on('load', function() {
     map.addSource('final84-3frnf3', {
         type: 'vector',
@@ -126,16 +138,6 @@ map.on('load', function() {
         }
     });
 });
-
-
-
-
-
-
-
-
-
-
 </script>
 
 </body>
