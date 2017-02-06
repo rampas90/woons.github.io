@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Intro to Basics\"\nauthor: \"WOONS\"\ndate: \"2016년 8월 12일\"\noutput: pdf_document\n---\n---\n\n**연산**\n```{r}\n# 5와 2의 합\n5 + 2\n\n# 9와 20의 합\n9 + 20\n```\n\n**연산의 확장**\n```{r eval=FALSE}\n# 뺄셈\n8 - 5 \n\n# 곱\n6 * 7\n\n # 나누기\n56 / 2 \n\n# 지수\n2^5\n\n# 나머지\n31 %% 5\n```\n\n**변수**\n```{r}\n# x에 50을 넣어보자\nx <- 50\n\n# 변수 x를 출력\nx\n\n# Assign a value to the variables my_apples and my_oranges\nmy_apples <- 5\nmy_oranges <- 6\n\n# Add these two variables together\nmy_apples + my_oranges\n\n# Create the variable my_fruit\nmy_fruit <- my_apples + my_oranges\nmy_fruit\n```\n\n__벡터의 연산__\n\n```{r}\n# Assign a value to the variable my_apples\nmy_apples <- 5 \n\n# Fix the assignment of my_oranges\nmy_oranges <- 6 \n\n# Create the variable my_fruit and print it out\nmy_fruit <- my_apples + my_oranges \nmy_fruit\n```\n\n**데이터타입**\n```{r}\n# Change my_numeric to be 42\nmy_numeric <- 42\n\n# Change my_character to be \"universe\"\nmy_character <- \"universe\"\n\n# Change my_logical to be FALSE\nmy_logical <- FALSE\n```\n\n**데이터타입 확인**\n```{r}\n# Check class of my_numeric\nclass(my_numeric)\n\n# Check class of my_character\nclass(my_character)\n\n# Check class of my_logical\nclass(my_logical)\n```\n\n\n",
+    "created" : 1471008318316.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1560737583",
+    "id" : "82EF63C3",
+    "lastKnownWriteTime" : 1471074013,
+    "last_content_update" : 1471074013590,
+    "path" : "~/Desktop/Google 드라이브/R강의/Introduction to R/Intro to Basic/Intro to Basic.Rmd",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

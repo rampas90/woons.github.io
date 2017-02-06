@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"lists\"\nauthor: \"WOONS\"\ndate: \"2016년 8월 14일\"\noutput: html_document\n---\n\n---\n\n--  \n\n**List란 (그 전에 리뷰와)**\n\n- **Vectors** (one dimensional array): can hold numeric, character or logical values. The elements in a vector all have the same data type.\n\n- **Matrices** (two dimensional array): can hold numeric, character or logical values. The elements in a matrix all have the same data type.\n\n- **Data frames** (two-dimensional objects): can hold numeric, character or logical values. Within a column all elements have the same data type, but different columns can be of different data type.\n\n- **Lists** : A list in R is similar to your to-do list at work or school: the different items on that list most likely differ in length, characteristic, type of activity that has to do be done\n\n--\n\n**리스트 만들기**\n```{r}\n# Vector with numerics from 1 up to 10\nmy_vector <- 1:10 \n\n# Matrix with numerics from 1 up to 9\nmy_matrix <- matrix(1:9, ncol = 3)\n\n# First 10 elements of the built-in data frame mtcars\nmy_df <- mtcars[1:10,]\n\n# Construct list with these different elements:\nmy_list <- list(my_vector, my_matrix, my_df)\n\nmy_list\n```\n\n--\n\n**List 이름 할당하기**\n```{r}\n# Vector with numerics from 1 up to 10\nmy_vector <- 1:10 \n\n# Matrix with numerics from 1 up to 9\nmy_matrix <- matrix(1:9, ncol = 3)\n\n# First 10 elements of the built-in data frame mtcars\nmy_df <- mtcars[1:10,]\n\n# Adapt list() call to give the components names\nmy_list <- list(my_vector, my_matrix, my_df)\nnames(my_list) <- c(\"vec\", \"mat\", \"df\")\n# Print out my_list\nmy_list\n```\n\n--\n\n**List안으로 접근하기**\n\n| 문법 |의미  |\n|:-|:-|\n|x$name  |리스트 x에서 키 값 name에 해당하는 값  |\n|x[n]  |리스트 x에서 n번째 데이터와 서브리스트  |\n| x[[n]] |리스트 x에서 n번째 저장된 값  |\n\n\n```{r}\n# shining_list is already pre-loaded in the workspace\nx <- list(name = \"foo\", height = c(1, 3, 5))\n# Print out the vector representing the actors\nx[2]\n\n# Print the second element of the vector representing the actors\nx$height[3]\n```\n\n--\n\n**List 추가하기**\n```{r}\n# shining_list, the list containing movie name, actors and reviews, is pre-loaded in the workspace\nx <- list(name = \"foo\", height = c(1, 3, 5))\n# We forgot something; add the year to shining_list\nx_plus <- c(x, year = 1980)\n# Have a look at shining_list_full\nstr(x)\n```\n\n\n",
+    "created" : 1471172704761.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1027790139",
+    "id" : "9404BEE7",
+    "lastKnownWriteTime" : 1471173180,
+    "last_content_update" : 1471173180563,
+    "path" : "~/Desktop/Google 드라이브/R강의/Introduction to R/list/list.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "docOutlineVisible" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

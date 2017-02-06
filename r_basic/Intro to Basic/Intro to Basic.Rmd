@@ -1,0 +1,94 @@
+---
+title: "Intro to Basics"
+author: "WOONS"
+date: "2016년 8월 12일"
+output: pdf_document
+---
+---
+
+**연산**
+```{r}
+# 5와 2의 합
+5 + 2
+
+# 9와 20의 합
+9 + 20
+```
+
+**연산의 확장**
+```{r eval=FALSE}
+# 뺄셈
+8 - 5 
+
+# 곱
+6 * 7
+
+ # 나누기
+56 / 2 
+
+# 지수
+2^5
+
+# 나머지
+31 %% 5
+```
+
+**변수**
+```{r}
+# x에 50을 넣어보자
+x <- 50
+
+# 변수 x를 출력
+x
+
+# Assign a value to the variables my_apples and my_oranges
+my_apples <- 5
+my_oranges <- 6
+
+# Add these two variables together
+my_apples + my_oranges
+
+# Create the variable my_fruit
+my_fruit <- my_apples + my_oranges
+my_fruit
+```
+
+__벡터의 연산__
+
+```{r}
+# Assign a value to the variable my_apples
+my_apples <- 5 
+
+# Fix the assignment of my_oranges
+my_oranges <- 6 
+
+# Create the variable my_fruit and print it out
+my_fruit <- my_apples + my_oranges 
+my_fruit
+```
+
+**데이터타입**
+```{r}
+# Change my_numeric to be 42
+my_numeric <- 42
+
+# Change my_character to be "universe"
+my_character <- "universe"
+
+# Change my_logical to be FALSE
+my_logical <- FALSE
+```
+
+**데이터타입 확인**
+```{r}
+# Check class of my_numeric
+class(my_numeric)
+
+# Check class of my_character
+class(my_character)
+
+# Check class of my_logical
+class(my_logical)
+```
+
+
