@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Data frames\"\nauthor: \"WOONS\"\ndate: \"2016년 8월 14일\"\noutput: html_document\n---\n\n---\n\n**데이터프레임이란**\n```{r}\n# Print out built-in R data frame\nmtcars \n\n# Call head() on mtcars\nhead(mtcars)\n\n# Investigate the structure of mtcars\nstr(mtcars)\n```\n\n**데이터프레임 만들기**\n```{r}\n# Definition of vectors\nname <- c(\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\")\ntype <- c(\"Terrestrial planet\", \"Terrestrial planet\", \"Terrestrial planet\", \n          \"Terrestrial planet\", \"Gas giant\", \"Gas giant\", \"Gas giant\", \"Gas giant\")\ndiameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)\nrotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)\nrings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)\n\n# Create a data frame from the vectors\nplanets_df <- data.frame(name, type, diameter, rotation, rings)\nplanets_df\n\n# Check the structure of planets_df\nstr(planets_df)\n```\n\n**Selection of data frame elements**\n```{r}\n# The planets_df data frame from the previous exercise is pre-loaded\nplanets_df\n# Print out diameter of Mercury (row 1, column 3)\nplanets_df[1,3]\n\n# Print out data for Mars (entire fourth row)\nplanets_df[4,]\n\n# The planets_df data frame from the previous exercise is pre-loaded\nplanets_df\n# Select first 5 values of diameter column\nplanets_df[1:5, \"diameter\"]\n```\n\n**특정 칼럼만 저장하기**\n```{r}\n# planets_df is pre-loaded in your workspace\nplanets_df\n# Select the rings variable from planets_df\nrings_vector <- planets_df$rings\n  \n# Print out rings_vector\nrings_vector\n```\n\n**TRUE, FALSE를 활용한 특정 칼럼 요소 출력**\n```{r}\n# planets_df and rings_vector are pre-loaded in your workspace\nplanets_df\n# Adapt the code to select all columns for planets with rings\nplanets_df[rings_vector,]\n```\n\n**subset()를 활용한 데이터추출**\n```{r}\n# planets_df is pre-loaded in your workspace\nplanets_df\n# Select planets with diameter < 1\nsubset(planets_df, subset = diameter < 1)\n```\n\n**Sorting your data**\n```{r}\n# planets_df is pre-loaded in your workspace\nplanets_df\n# Use order() to create positions\npositions <- order(planets_df$diameter)  \n\n# Use positions to sort planets_df\nplanets_df[positions, ]\n```\n\n\n",
+    "created" : 1471153721478.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2636236511",
+    "id" : "699E5A5B",
+    "lastKnownWriteTime" : 1471155556,
+    "last_content_update" : 1471155556747,
+    "path" : "~/Desktop/Google 드라이브/R강의/Introduction to R/Dataframe/dataframe.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
