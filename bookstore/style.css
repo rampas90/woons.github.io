@@ -1,11 +1,13 @@
 		@import url('https://fonts.googleapis.com/css?family=Oswald:600');
 
 		#main { 
-			height: 200px;
-			padding-top: 10px;  
+			/*height: 200px;*/
+			padding-top: 40px;  
 			text-align: center;   
 		} 
-		 
+		
+		#main
+
 		#containers {
 			margin: 5% 0%;
 		} 
@@ -351,6 +353,7 @@
 			border-radius: 50%;
 		}
  
+
 		.modalbox {
 			position: absolute;
 			top: 5%;
