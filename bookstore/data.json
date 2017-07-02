@@ -1384,5 +1384,27 @@
    "Location": "international",
    "Subjects": "infographics",
    "Price": 32
+ },
+ {
+   "img": "Images/127.jpg",
+   "Title": "대한민국의 국보",
+   "Author": "그래픽딕셔너리",
+   "Publisher": "ZERO PER ZERO",
+   "Pages": 320,
+   "Genre": "infographics",
+   "Location": "domestic",
+   "Subjects": "infographics",
+   "Price": 20000
+ },
+ {
+   "img": "Images/128.jpg",
+   "Title": "당신이 찾는 서체가 없네요",
+   "Author": "사이먼 가필드",
+   "Publisher": "안그라픽스",
+   "Pages": 424,
+   "Genre": "design, graphics",
+   "Location": "domestic",
+   "Subjects": "design",
+   "Price": 17000
  }
 ]
