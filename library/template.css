@@ -1,4 +1,6 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+/*@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);*/
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+
 		body {
 			letter-spacing: -1px;
 			font-family: 'Noto Sans KR', sans-serif;  

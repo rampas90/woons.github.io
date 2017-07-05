@@ -9,7 +9,9 @@
  *
  */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+/*@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);*/
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+
 /*!
  * # Semantic UI 2.2.10 - Reset
  * http://github.com/semantic-org/semantic-ui/
