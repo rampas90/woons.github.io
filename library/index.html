@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>woons books</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="semantic.css"> 
+	<link rel="stylesheet"  type="text/css"  href="style.css"> 
+	<script src="lib/vue.js"></script>
+	<script src="lib/jquery.js"></script>  
+
+	<!-- Facebook Meta -->
+    <meta property="og:title" content="Books Library on Infographics" />
+    <meta property="og:description" content="데이터시각화 및 정보시각화 관련 책데이터 정리" />
+    <meta property="og:url" content="https://woons.github.io/bookstore/" />
+    <meta property="og:image" content="http://woons.github.io/bookstore/Images/background.png" />
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="Images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="Images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="Images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="Images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="Images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="Images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="Images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="Images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="Images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="Images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body >
+	<section id="main"> 
+       		<div class="ui container">
+       			  <h1>Data Visualization & Information Design Books</h1>
+       			  <h4>정보시각화와 데이터시각화 관련 도서 라이브러리</h4>
+       		</div> 
+    </section>
+	<section class="ui container" id="containers">  
+		<div class="btnbox">	
+			<div v-show="btnactiveB">
+				<p class="explain">국내/외</p>
+				<div class="ui checkbox" v-for="list in locationlist">
+					<input type="checkbox" name="finalCheck" :value="list.code" v-model="pick" @click="pickbook" >
+					<label :for="list.code"> {{ list.name }}</label>
+				</div>
+			</div> 
+		</div> 
+		<div class="btnbox checkwrap">	
+			<div v-show="btnactive">
+				<p class="explain">책 분류</p>
+				<div class="ui checkbox" v-for="list in subjectlist">
+					<input type="checkbox" name="finalCheck" :value="list.code" v-model="subIs" @click="category" >
+					<label :for="list.code"> {{ list.name }}</label>
+				</div>
+			</div>
+			<div class="mobilebtn" @click="btnactive =!btnactive"><p>책 분류 선택</p></div>
+		</div> 
+		 
+		<div class="modalmask" v-show="showCard" v-cloak>
+			<div class="modalbox ui items">
+				<div class="closebtn"  @click="showCard= !showCard" >
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve"> 
+								<g>
+									<path class="st2" d="M54.7,5.7C54.1,5,53,5,52.4,5.7L30.3,27.7L7.6,4.9c-0.7-0.7-1.7-0.7-2.3,0c-0.7,0.7-0.7,1.7,0,2.3L28,30
+										L5.2,52.8c-0.7,0.7-0.7,1.7,0,2.3c0.3,0.3,0.7,0.5,1.2,0.5c0.5,0,0.9-0.1,1.2-0.5l22.8-22.8l22.1,22.1c0.3,0.3,0.7,0.5,1.2,0.5
+										c0.5,0,0.9-0.1,1.2-0.5c0.7-0.7,0.7-1.7,0-2.3L32.7,30L54.7,7.9C55.3,7.3,55.3,6.2,54.7,5.7z"/>
+								</g>
+								</svg>
+
+				</div>
+				<div class="item"> 
+					<div class="image">
+						<img :src="imglink"> 
+					</div>
+					<div class="content">
+						<p class="cardTitle"> {{ bookTitle }} </p>   
+
+						<div class="description">
+							<p class="explain">책 정보</p>
+							<table class="ui basic table"> 
+								<tbody>
+									<tr>
+										<td><strong>분류</strong></td>
+										<td>{{ bookCategory }}</td>
+									</tr>
+									 <tr>
+										<td><strong>장르</strong></td>
+										<td>{{ bookgenre }}</td>
+									</tr>
+
+									<tr>
+										<td><strong>작가</strong></td>
+										<td>{{ bookauthor }}</td>
+									</tr>
+									<tr>
+										<td><strong>출판사</strong></td>
+										<td>{{ bookpublic }}</td>
+									</tr>
+									<tr>
+										<td><strong>가격</strong></td>
+										<td>{{ bookprice }}</td>
+									</tr>
+									 
+								</tbody>
+							</table> 
+						</div>
+					</div>
+
+				</div> 
+				
+			</div>
+		</div>  
+		 <div id="manbox">
+		 	<icons v-for="(one, index) in book" :one="one" :index="index+1" :key="index"></icons>	 
+		 </div>     
+	</section> 
+	<script  type="text/x-template" id="man-icon">
+		 	<div class="testbox">  
+				<img class="ui image manpic" :src="'Images/'+index+'.jpg'"   @click="testimg(one)">     
+				<p class="jobText">{{ one.Author }}</p>
+				<p class="nameText">{{ one.Title }}</p>  
+			</div> 
+		 </script>
+	<script type="text/javascript" src="book.js"></script>   
+	</body>
+	
+</html>
