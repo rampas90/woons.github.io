@@ -1,3 +1,7 @@
+		[v-cloak] {
+         display: none;
+      }
+
 		@import url('https://fonts.googleapis.com/css?family=Oswald:600');
 
 		#main { 
@@ -26,10 +30,6 @@
 
 		.st0{ fill: #fff;} 
 		.st2 {stroke: none; fill: #222;}
-		
-		[v-cloak] {
-         display: none;
-      }
 
 		.mainTitle { 
 			font-size: 1.3em;
