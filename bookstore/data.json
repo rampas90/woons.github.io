@@ -1406,5 +1406,27 @@
    "Location": "domestic",
    "Subjects": "design",
    "Price": 17000
+ },
+ {
+   "img": "Images/129.jpg",
+   "Title": "구글 맵, 새로운 세계의 탄생",
+   "Author": "마쓰오카 게이스케",
+   "Publisher": "위즈덤하우스",
+   "Pages": 232,
+   "Genre": "mapping",
+   "Location": "domestic",
+   "Subjects": "mapping",
+   "Price": 14000
+ },
+ {
+   "img": "Images/130.jpg",
+   "Title": "MALOFIEJ 1997",
+   "Author": "SND-E",
+   "Publisher": "UNIVERSIDAD PUBLICA DE NAVARRA",
+   "Pages": 80,
+   "Genre": "Infographics, Data Visualization",
+   "Location": "International",
+   "Subjects": "infographics",
+   "Price": 30
  }
 ]
