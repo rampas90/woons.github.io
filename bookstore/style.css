@@ -26,7 +26,10 @@
 
 		.st0{ fill: #fff;} 
 		.st2 {stroke: none; fill: #222;}
-
+		
+		[v-cloak] {
+         display: none;
+      }
 
 		.mainTitle { 
 			font-size: 1.3em;
