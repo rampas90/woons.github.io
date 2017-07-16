@@ -1428,5 +1428,38 @@
    "Location": "International",
    "Subjects": "infographics",
    "Price": 30
+ },
+ {
+   "img": "Images/131.jpg",
+   "Title": "쉽게 배우는 R 데이터 분석",
+   "Author": "김영우",
+   "Publisher": "이지스퍼블리싱",
+   "Pages": 376,
+   "Genre": "data, r, data analysis",
+   "Location": "domestic",
+   "Subjects": "data",
+   "Price": 20000
+ },
+ {
+   "img": "Images/132.jpg",
+   "Title": "스몰데이터",
+   "Author": "마틴 린드스트롬",
+   "Publisher": "로드북",
+   "Pages": 360,
+   "Genre": "data",
+   "Location": "domestic",
+   "Subjects": "data",
+   "Price": 16000
+ },
+ {
+   "img": "Images/133.jpg",
+   "Title": "데이터 시각화 원리",
+   "Author": "조로즈 카몽이스",
+   "Publisher": "에이콘",
+   "Pages": 468,
+   "Genre": "data visualization, infographics",
+   "Location": "domestic",
+   "Subjects": "data visualization, infographics",
+   "Price": 35000
  }
 ]
