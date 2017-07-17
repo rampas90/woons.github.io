@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Facebook Meta -->
+    <meta property="og:title" content="서울의 고가도로는 왜 철거될까?" />
+    <meta property="og:type"  content="article" />
+    <meta property="og:description" content="데이터로 살펴본 서울시 고가도로" />
+    <meta property="og:url" content="https://woons.github.io/overpass/index.html" />
+    <meta property="og:image" content="http://woons.github.io/overpass/logo.png" />
+    <title>서울의 고가도로는 왜 철거될까?</title>
+    <style type="text/css">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Calibri, sans-serif;
+      }
+      .content-section {
+        background-color:#1A1919;
+        width: 100%;
+        margin: 0 auto;
+        padding: 15% 0;
+      }
+      .content-section h1 {
+        width: 100%;
+        margin-left: -30%;
+        margin-bottom: 2em;
+        color:white;
+        text-align: right;
+      }
+      .content-section p {
+        margin-top: 2.5em;
+        margin-left: 65%;
+        width: 100%;
+        font-size: 1em;
+        font-weight:100;
+        color: white;
+        text-align: left;
+      }
+
+      .content-section img{
+        margin-left: 15%;
+      }
+
+      .text-wrapper{
+        width: 100%;
+        position: relative;
+        margin-top: -20%;
+      }
+
+      .map {
+        max-width: 100%;
+        width:auto;
+        vertical-align: bottom;
+
+
+      }
+
+
+
+
+      .video-section {
+        position: relative;
+        width: 100%;
+        max-height: 720px;
+        overflow: hidden;
+      }
+      #video-elem {
+        width: 100%;
+      }
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .video-overlay:hover {
+        opacity: 1;
+      }
+      .video-overlay h1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 5em;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+      }
+        .video-overlay h2{
+            position: absolute;
+            left: 50%;
+            top: 95%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 1em;
+            font-weight: 100;
+            color: white;
+            text-align: center;
+      }
+        .video-overlay img{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 1em;
+            font-weight: 100;
+            color: white;
+            text-align: center;
+      }
+        
+        img {
+            max-width: 100%;
+            height:auto;
+        }
+
+
+    </style>
+  </head>
+  <body>
+
+
+    <div class="video-section">
+      <video id="video-elem" preload="auto" autoplay="true" loop="loop" muted="muted" poster="screenshot.png">
+        <source src="video.mp4" type="video/mp4">
+          Video not supported
+      </video>
+
+      <div class="video-overlay">
+          <center><img src="logo1.png" alt="logo"></center>
+<!--          <center><img src="heatmap.png" alt="heatmap"></center> -->
+          <h2>by <strong>Kim Si Hyun, Jo Gyu Eun, Shin Na Ri, Choi il jun, Park Si young</strong><br>July 15, 2017 </h2>
+          <h2></h2>
+      </div>
+
+    </div>
+
+      <div class="map">
+          <center><img src="HighWay_webpage001.jpg" alt="map"></center>
+          <video id="video-elem" preload="auto" autoplay="true" loop="loop" muted="muted" poster="screenshot.png">
+        <source src="video2.mp4" type="video/mp4">
+          Video not supported
+      </video>
+          <center><img src="HighWay_webpage002.jpg" alt="map"></center>
+<!--      <img src="HighWay_webpage02.jpg" alt="map">-->
+    </div>
+
+
+
+
+  </body>
+</html>
