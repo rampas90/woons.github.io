@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+		body {
+			background-image: url("back2.gif");
+			background-size: cover;
+			color: #fff;
+		}
+
+		#main {
+			height: 50px;
+			margin: 20px 0px;
+		}
+
+		.title {
+			font-size: 2em;
+
+		}
+ 		
+ 		.ui.segment {
+ 			background:  none;
+ 		}
+		
+		.ui.checkbox {
+			margin-right: 25px;
+		}
+
+		.ui.checkbox label {
+			color: #fff;
+		}
+
+		#chart {
+			width: auto;
+			margin:0 auto;
+		}
+
+		#chart svg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+  
+		svg text {
+			font-weight: 500;
+			font-size: 0.8em;
+			fill: #fff; 
+		}
+
+		.card {
+			width: 30%;
+			height: auto;
+			margin: 10px 0px;
+			position: absolute;
+			top:0;
+
+		}
+
+		.whois { 
+			font-size: 1.4em;
+			font-weight: 600;
+			color: #fff;
+		}
+		
+		.explain {
+			margin: 0;
+			font-size: 1em;
+			font-weight: 400;
+			color: #ccc;
+		}
+
+		.cardhead {
+			margin:0;
+			font-size: 1.1em;
+			font-weight: 500;
+			color: #fff;
+		}
+
+		@media screen and (max-width: 639px) {
+			
+			body {
+				 background-position: center;
+				background-size: cover;
+				color: #fff;
+			}
+
+			.title {
+				font-size: 1.4em;			
+			}
+
+			.ui.checkbox {
+				margin-right: 5px;
+				margin-top: 0px;
+			} 
+
+			#canvas {
+				min-height: 80vh;
+			}
+			.card {
+				width: 100%;
+				height: auto;
+				margin: 0px 0px;
+				position: relative;
+				background-color: rgba(0,0,0,0.7);
+			}
+
+			svg text {
+				font-size: 0.5em;
+			}
+		}
+		
