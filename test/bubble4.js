@@ -478,7 +478,13 @@ d3.json("data.json", function(error, data) {
 		.on("tick", tick);
 		
 		force.start();  
-		setTimeout(function() {force.stop(); }, 1500);
+		/*setTimeout(function() {force.stop(); }, 1500);*/
+
+		setTimeout(function tick(){
+    force.tick();
+    if(alpha >= .005);
+        setTimeout(tick, 0);
+}, 0);
 
 	// Draw circle for each node.
 	var circle = svg.selectAll("g")
