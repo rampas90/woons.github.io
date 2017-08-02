@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
+.profile {
+  margin-bottom: 20px;
+  width: 270px;
+}
 
 
 body {
